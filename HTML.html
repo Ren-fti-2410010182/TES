@@ -32,38 +32,67 @@
             </div>
         </div>
         <style>
+            body {
+                background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                min-height: 100vh;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
             .calculator {
-                width: 300px;
-                margin: 50px auto;
-                border: 1px solid #ccc;
-                border-radius: 5px;
+                width: 340px;
+                margin: 20px;
+                border: 1px solid #d9a5a5;
+                border-radius: 15px;
                 padding: 20px;
-                background-color: #f9f9f9;
+                background: linear-gradient(180deg, #ffffff 0%, #f7f1f1 100%);
+                box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
             }
             #display {
                 width: 100%;
-                height: 50px;
-                font-size: 24px;
+                height: 60px;
+                font-size: 26px;
                 text-align: right;
                 margin-bottom: 20px;
-                padding: 10px;
+                padding: 12px;
+                border-radius: 10px;
+                border: 1px solid #d1c4c4;
                 box-sizing: border-box;
+                background: #fff;
+                box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
             }
             .buttons {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
-                gap: 10px;
+                gap: 12px;
             }
             button {
-                height: 50px;
+                height: 55px;
                 font-size: 18px;
                 border: none;
-                border-radius: 5px;
-                background-color: #e0e0e0;
+                border-radius: 10px;
+                background-color: #ffe8e0;
+                color: #333;
                 cursor: pointer;
+                transition: all 0.25s ease;
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+            }
+            button.operator {
+                background-color: #ffb4a2;
+                color: #fff;
+            }
+            button.action {
+                background-color: #7ec8e3;
+                color: #fff;
             }
             button:hover {
-                background-color: #d0d0d0;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+            }
+            button:active {
+                transform: translateY(1px);
             }
         </style>
         <script>
